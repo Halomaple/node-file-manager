@@ -1,4 +1,5 @@
 # Screen Shot
+
 ![screenshot](https://raw.githubusercontent.com/efeiefei/node-file-manager/master/example/screenshot.png)
 
 # Usage
@@ -11,7 +12,7 @@
 Or
 
 ```sh
-  git clone https://github.com/efeiefei/node-file-manager.git
+  git clone https://github.com/halomaple/node-file-manager.git
   cd node-file-manager
   npm i
   cd lib
