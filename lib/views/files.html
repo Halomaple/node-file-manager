@@ -273,10 +273,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr
-                        ng-repeat="file in FM.curFiles | orderBy:'!isFolder'"
-                        title="{{file.isFolder ? 'Click to open' : 'Click to download'}}"
-                    >
+                    <tr ng-repeat="file in FM.curFiles | orderBy:'!isFolder'">
                         <td>
                             <input
                                 type="checkbox"
@@ -285,12 +282,19 @@
                                 class="cursor-pointer"
                             />
                         </td>
-                        <td ng-click="FM.clickFile(file)">
+                        <td
+                            ng-click="FM.clickFile(file)"
+                            title="{{file.isFolder ? 'Click to open' : 'Click to download'}}"
+                        >
                             <span
                                 class="{{file.isFolder ? 'glyphicon glyphicon-folder-open' : 'glyphicon glyphicon-file'}}"
                             ></span>
                         </td>
-                        <td ng-click="FM.clickFile(file)" class="cursor-pointer">
+                        <td
+                            ng-click="FM.clickFile(file)"
+                            class="cursor-pointer"
+                            title="{{file.isFolder ? 'Click to open' : 'Click to download'}}"
+                        >
                             <a>{{file.name}}</a>
                         </td>
                         <td>{{file.humanSize}}</td>
