@@ -273,7 +273,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr ng-repeat="file in FM.curFiles | orderBy:'!isFolder'">
+                    <tr ng-repeat="file in FM.curFiles | orderBy:['!isFolder', 'name']">
                         <td>
                             <input
                                 type="checkbox"
