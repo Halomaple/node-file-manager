@@ -12,13 +12,26 @@
         <script src="//cdn.bootcss.com/angular.js/1.4.5/angular.min.js"></script>
         <script src="js/angular-file.js"></script>
         <script src="js/app.js"></script>
-
         <style type="text/css">
+            body {
+                position: relative;
+            }
             .breadcrumb {
                 margin-top: 10px;
             }
             .cursor-pointer {
                 cursor: pointer;
+            }
+
+            #successAlert,
+            #warnAlert,
+            #errorAlert {
+                display: none;
+                position: fixed;
+                bottom: 0;
+                right: 15px;
+                z-index: 1000000;
+                width: 50vw;
             }
         </style>
     </head>
@@ -309,18 +322,21 @@
                     </tr>
                 </tbody>
             </table>
+        </div>
 
-            <div id="successAlert" class="alert alert-success" role="alert" style="display: none;">
-                <span>{{FM.successData}}</span>
-            </div>
+        <div id="successAlert" class="alert alert-success" role="alert">
+            <span>{{FM.successData}}</span>
+        </div>
 
-            <div id="errorAlert" class="alert alert-danger" role="alert" style="display: none;">
-                <button type="button" class="close" data-dismiss="alert" alert-label="Close">
-                    <span aria-hidden="true">&times</span>
-                </button>
-                <strong>Error!</strong>
-                {{FM.errorData}}
-            </div>
+        <div id="warnAlert" class="alert alert-warning" role="alert">
+            <span>{{FM.warnData}}</span>
+        </div>
+        <div id="errorAlert" class="alert alert-danger" role="alert">
+            <button type="button" class="close" data-dismiss="alert" alert-label="Close">
+                <span aria-hidden="true">&times</span>
+            </button>
+            <strong>Error!</strong>
+            {{FM.errorData}}
         </div>
     </body>
 </html>
