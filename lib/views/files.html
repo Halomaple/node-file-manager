@@ -292,6 +292,7 @@
                                 type="checkbox"
                                 value="{{file.name}}"
                                 ng-model="file.selected"
+                                ng-disabled="!file.selectable"
                                 class="cursor-pointer"
                             />
                         </td>
