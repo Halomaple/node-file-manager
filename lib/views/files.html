@@ -313,7 +313,7 @@
                         </td>
                         <td>{{file.humanSize}}</td>
                         <td>{{file.humanTime}}</td>
-                        <td ng-click="FM.copyFileLink(file)">
+                        <td ng-click="!file.isFolder && FM.copyFileLink(file)">
                             <span
                                 ng-hide="file.isFolder"
                                 class="glyphicon glyphicon-copy cursor-pointer"
